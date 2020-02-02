@@ -46,10 +46,10 @@
       <form class="form-inline f-flex">
         
           <legend><h4>Personal information:</h4></legend>
-          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="firstName" placeholder="First Name" name="firstname" value=""><br>
-          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="lastName" placeholder="Last Name" name="lastname" value=""><br>
+          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputFName" placeholder="First Name" name="firstname" value=""><br>
+          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputLName" placeholder="Last Name" name="lastname" value=""><br>
           Date: <br>
-          <input type="date" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="date" name="date" value=""><br><br>
+          <input type="date" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputDate" name="date" value=""><br><br>
           <button type="submit" class="btn btn-primary mx-auto">Submit</button>
         
       </form>
@@ -58,8 +58,10 @@
 
       const form = document.querySelector('.form-inline');
       const inputFName = form.querySelector('#inputFName');
+      const inputLName = form.querySelector('#inputLName');
+      const inputDate = form.querySelector('#inputDate');
       //create a functions to push
-    function firebasePush(input) {
+    function firebasePush(finput, linput, date) {
 
 
       //prevents from braking
@@ -68,19 +70,29 @@
         }
 
       //push itself
-        var mailsRef = firebase.database().ref('fnames').push().set(
+        var fNameRef = firebase.database().ref('fnames').push().set(
         {
-        fname: input.value
+        fname: finput.value
+        }
+        );
+        var lNameRef = firebase.database().ref('lnames').push().set(
+        {
+        lname: linput.value
+        }
+        );
+        var dateRef = firebase.database().ref('dates').push().set(
+        {
+        date: date.value
         }
         );
 
-}
+    }
 
 //push on form submit
 if (form) {
 form.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    firebasePush(inputFName);
+    firebasePush(inputFName, inputLName, inputDate);
 
     //shows alert if everything went well.
     return alert('Data Successfully Sent to Realtime Database');
