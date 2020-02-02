@@ -15,13 +15,25 @@
     <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <style>
+    table {
+      width:100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+  </style>
 
-    
   </head>
   <body>
     <div class='header'>
       <H1>Welcome to WeClean! </H1>
-      <h3>Please drop a pin on the location that needs cleaning up, and submit your name. Thank you for doing your part!</h3>  
+      <h3>Please drop a pin on the location that needs cleaning up, and submit your name. Thank you for doing your part!</h3>
     </div>
        <!--The div element for the map -->
     <div id="map"></div>
@@ -35,9 +47,26 @@
           <input type="date" name="date" value=""><br><br>
           <input type="submit" value="Submit">
         </fieldset>
+      </div>
+      <div id="table">
+        <table>
+          <tr>
+            <th>date</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Address</th>
+          </tr>
+          <tr>
+        </table>
       </form>
     </div>
     <script>
+
+
+//Displaying a table
+
+
+
 
 // Get a reference to the database service
 var database = firebase.database();
@@ -54,9 +83,9 @@ function initMap() {
         new google.maps.Marker({
             position: event.latLng,
             map: map,
-            draggable:true, 
+            draggable:true,
         });
-        
+
       Popup = createPopupClass();
       popup = new Popup(
       loc,
@@ -64,7 +93,7 @@ function initMap() {
       popup.setMap(map);
         });
 
-  
+
 
 
 }
@@ -142,7 +171,7 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZz0F-6LFcz2qfvYgM4N5TDNSPq0blxfI&callback=initMap">
     </script>
-    
+
   </body>
-  
+
 </html>
