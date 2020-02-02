@@ -19,6 +19,11 @@
     
   </head>
   <body>
+    const config = {
+      apiKey: "AIzaSyDA00GJVlDCF4jl0etPhGeSygpsuZncVco"
+      authDomain: "mchacks-cc3b5.firebaseapp.com"
+      databaseURL: ""
+    }
     <div class='header'>
       <H1>Welcome to WeClean! </H1>
       <h3>Please drop a pin on the location that needs cleaning up, and submit your name. Thank you for doing your part!</h3>  
@@ -29,11 +34,11 @@
       <form action="/action_page.php">
         <fieldset>
           <legend><h4>Personal information:</h4></legend>
-          <input type="text" placeholder="First Name" name="firstname" value=""><br>
-          <input type="text" placeholder="Last Name" name="lastname" value=""><br>
+          <input type="text" id="firstName" placeholder="First Name" name="firstname" value=""><br>
+          <input type="text" id="lastName" placeholder="Last Name" name="lastname" value=""><br>
           Date: <br>
-          <input type="date" name="date" value=""><br><br>
-          <input type="submit" value="Submit">
+          <input type="date" id="date" name="date" value=""><br><br>
+          <button onclick="saveData(firstName, lastName, date)" type="button">Submit</button>
         </fieldset>
       </form>
     </div>
@@ -41,6 +46,15 @@
 
 // Get a reference to the database service
 var database = firebase.database();
+
+//save data
+function saveData(fN, lN, date){
+  firebase.database().ref('events/'+fn).set({
+    firstName : fN,
+    lastName : lN,
+    date : date
+  });
+}
 
 // Initialize and add the map
 var loc;
