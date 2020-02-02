@@ -43,18 +43,50 @@
        <!--The div element for the map -->
     <div id="map"></div>
     <div id="content">
-      <form >
-        <fieldset>
+      <form class="form-inline f-flex">
+        
           <legend><h4>Personal information:</h4></legend>
-          <input type="text" id="firstName" placeholder="First Name" name="firstname" value=""><br>
-          <input type="text" id="lastName" placeholder="Last Name" name="lastname" value=""><br>
+          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="firstName" placeholder="First Name" name="firstname" value=""><br>
+          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="lastName" placeholder="Last Name" name="lastname" value=""><br>
           Date: <br>
-          <input type="date" id="date" name="date" value=""><br><br>
-          <button onclick="saveData(firstName, lastName, date)" type="button">Submit</button>
-        </fieldset>
+          <input type="date" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="date" name="date" value=""><br><br>
+          <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+        
       </form>
     </div>
     <script>
+
+      const form = document.querySelector('.form-inline');
+      const inputFName = form.querySelector('#inputFName');
+      //create a functions to push
+    function firebasePush(input) {
+
+
+      //prevents from braking
+        if (!firebase.apps.length) {
+          firebase.initializeApp(config);
+        }
+
+      //push itself
+        var mailsRef = firebase.database().ref('fnames').push().set(
+        {
+        fname: input.value
+        }
+        );
+
+}
+
+//push on form submit
+if (form) {
+form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    firebasePush(inputFName);
+
+    //shows alert if everything went well.
+    return alert('Data Successfully Sent to Realtime Database');
+})
+}
+      
 
 // Get a reference to the database service
 //var database = firebase.database();
