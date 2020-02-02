@@ -60,26 +60,15 @@
        <!--The div element for the map -->
     <div id="map"></div>
     <div id="content">
-      <form >
-        <fieldset>
+      <form class="form-inline f-flex">
+
           <legend><h4>Personal information:</h4></legend>
-          <input type="text" id="firstName" placeholder="First Name" name="firstname" value=""><br>
-          <input type="text" id="lastName" placeholder="Last Name" name="lastname" value=""><br>
+          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="firstName" placeholder="First Name" name="firstname" value=""><br>
+          <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="lastName" placeholder="Last Name" name="lastname" value=""><br>
           Date: <br>
-          <input type="date" id="date" name="date" value=""><br><br>
-          <button onclick="saveData(firstName, lastName, date)" type="button">Submit</button>
-        </fieldset>
-      </div>
-      <div id="table">
-        <table>
-          <tr>
-            <th>Date</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Address</th>
-          </tr>
-          <tr>
-        </table>
+          <input type="date" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="date" name="date" value=""><br><br>
+          <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+
       </form>
     </div>
     <script>
