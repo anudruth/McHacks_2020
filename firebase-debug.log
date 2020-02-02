@@ -1,53 +1,29 @@
-<<<<<<< HEAD
-[debug] [2020-02-02T15:41:52.868Z] ----------------------------------------------------------------------
-[debug] [2020-02-02T15:41:52.870Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anudr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2020-02-02T15:41:52.870Z] CLI Version:   7.12.1
-[debug] [2020-02-02T15:41:52.870Z] Platform:      win32
-[debug] [2020-02-02T15:41:52.871Z] Node Version:  v12.14.1
-[debug] [2020-02-02T15:41:52.872Z] Time:          Sun Feb 02 2020 10:41:52 GMT-0500 (Eastern Standard Time)
-[debug] [2020-02-02T15:41:52.872Z] ----------------------------------------------------------------------
-[debug] [2020-02-02T15:41:52.872Z] 
-[debug] [2020-02-02T15:41:52.880Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-02-02T15:41:52.880Z] > authorizing via signed-in user
-[debug] [2020-02-02T15:41:52.880Z] [iam] checking project mchacks-cc3b5 for permissions ["firebase.projects.get"]
-[debug] [2020-02-02T15:41:52.882Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mchacks-cc3b5:testIamPermissions  
+[debug] [2020-02-02T16:20:41.342Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T16:20:41.344Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anudr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-02-02T16:20:41.344Z] CLI Version:   7.12.1
+[debug] [2020-02-02T16:20:41.344Z] Platform:      win32
+[debug] [2020-02-02T16:20:41.344Z] Node Version:  v12.14.1
+[debug] [2020-02-02T16:20:41.345Z] Time:          Sun Feb 02 2020 11:20:41 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-02T16:20:41.345Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T16:20:41.345Z] 
+[debug] [2020-02-02T16:20:41.350Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-02T16:20:41.351Z] > authorizing via signed-in user
+[debug] [2020-02-02T16:20:41.351Z] [iam] checking project mchacks-cc3b5 for permissions ["firebase.projects.get"]
+[debug] [2020-02-02T16:20:41.352Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-02T16:20:41.352Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-02T16:20:41.472Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:20:41.477Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mchacks-cc3b5:testIamPermissions  
 
-[debug] [2020-02-02T15:41:53.209Z] <<< HTTP RESPONSE 200
-[debug] [2020-02-02T15:41:53.215Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5  
+[debug] [2020-02-02T16:20:42.071Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:20:42.071Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5  
  
-[debug] [2020-02-02T15:41:53.711Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:20:42.577Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\anudr\McHacks_2020'...
 [info] 
-[debug] [2020-02-02T15:41:53.721Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5/webApps/-/config  
+[debug] [2020-02-02T16:20:42.581Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5/webApps/-/config  
  
-[debug] [2020-02-02T15:41:54.093Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:20:43.267Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
-=======
-[debug] [2020-02-02T15:08:21.084Z] ----------------------------------------------------------------------
-[debug] [2020-02-02T15:08:21.087Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\leotr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2020-02-02T15:08:21.087Z] CLI Version:   7.12.1
-[debug] [2020-02-02T15:08:21.087Z] Platform:      win32
-[debug] [2020-02-02T15:08:21.087Z] Node Version:  v12.14.1
-[debug] [2020-02-02T15:08:21.088Z] Time:          Sun Feb 02 2020 10:08:21 GMT-0500 (Eastern Standard Time)
-[debug] [2020-02-02T15:08:21.088Z] ----------------------------------------------------------------------
-[debug] [2020-02-02T15:08:21.088Z] 
-[debug] [2020-02-02T15:08:21.106Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-02-02T15:08:21.107Z] > authorizing via signed-in user
-[debug] [2020-02-02T15:08:21.107Z] [iam] checking project mchacks-cc3b5 for permissions ["firebase.projects.get"]
-[debug] [2020-02-02T15:08:21.110Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mchacks-cc3b5:testIamPermissions  
-
-[debug] [2020-02-02T15:08:21.831Z] <<< HTTP RESPONSE 200
-[debug] [2020-02-02T15:08:21.838Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5  
- 
-[debug] [2020-02-02T15:08:22.127Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\Users\leotr\McHacks_2020'...
-[info] 
-[debug] [2020-02-02T15:08:22.157Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5/webApps/-/config  
- 
-[debug] [2020-02-02T15:08:22.535Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] +  hosting: Local server: http://localhost:5000
->>>>>>> c452c703f8dad40a02bd21cf800e367116097042

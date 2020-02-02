@@ -38,6 +38,11 @@
   </head>
 
   <body>
+    <p>
+      <ol id = "data">
+
+      </ol>
+    </p>>
     <script>
       const config = {
         apiKey: "AIzaSyDA00GJVlDCF4jl0etPhGeSygpsuZncVco",
@@ -47,12 +52,17 @@
       };
 
       firebase.initializeApp(config);
-      const preObject = document.getElementById('object');
-      const dbRefObject = firebase.database().ref().child('object');
-      dbRefObject.on('value', snap=>console.log(snap.val()));
+      database = firebase.database();
+
+      var ref = database.ref('lnames');
+      ref.on('value', gotData, errData);
+      //const preObject = document.getElementById('lnames');
+      //var dbRefObject = firebase.database().ref("lnames");
+      
+      //dbRefObject.on('value', snap=>{preObject.innerText=JSON.stringify(snap.val(),null,3);});
       </script>
 
-    <pre id="object"></pre>
+   
     <div class='header'>
       <H1>Welcome to WeClean! </H1>
       <h3>Please drop a pin on the location that needs cleaning up, and submit your name. Thank you for doing your part!</h3>
@@ -71,7 +81,34 @@
 
       </form>
     </div>
+    <div id="table">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Address</th>
+        </tr>
+      </table>
     <script>
+
+      function gotData(data){
+        //console.log(data.val());
+        var lnames = data.val();
+        var keys = Object.keys(lnames);
+        console.log(keys);
+        for (var i = 0; i<keys.length(); i++){
+          var k = keys[i];
+          var lastname = lnames[k].lname;
+          var li = createElement('li', lastnames);
+          li.parent('data');
+        }
+      }
+
+      function errData(data){
+        console.log('Error!');
+        console.log(err);
+      }
 
       const form = document.querySelector('.form-inline');
       const inputFName = form.querySelector('#inputFName');
