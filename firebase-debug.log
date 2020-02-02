@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [debug] [2020-02-02T15:41:52.868Z] ----------------------------------------------------------------------
 [debug] [2020-02-02T15:41:52.870Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anudr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
 [debug] [2020-02-02T15:41:52.870Z] CLI Version:   7.12.1
@@ -23,3 +24,30 @@
 [debug] [2020-02-02T15:41:54.093Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
+=======
+[debug] [2020-02-02T15:08:21.084Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T15:08:21.087Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\leotr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-02-02T15:08:21.087Z] CLI Version:   7.12.1
+[debug] [2020-02-02T15:08:21.087Z] Platform:      win32
+[debug] [2020-02-02T15:08:21.087Z] Node Version:  v12.14.1
+[debug] [2020-02-02T15:08:21.088Z] Time:          Sun Feb 02 2020 10:08:21 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-02T15:08:21.088Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T15:08:21.088Z] 
+[debug] [2020-02-02T15:08:21.106Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-02T15:08:21.107Z] > authorizing via signed-in user
+[debug] [2020-02-02T15:08:21.107Z] [iam] checking project mchacks-cc3b5 for permissions ["firebase.projects.get"]
+[debug] [2020-02-02T15:08:21.110Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mchacks-cc3b5:testIamPermissions  
+
+[debug] [2020-02-02T15:08:21.831Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T15:08:21.838Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5  
+ 
+[debug] [2020-02-02T15:08:22.127Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\leotr\McHacks_2020'...
+[info] 
+[debug] [2020-02-02T15:08:22.157Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mchacks-cc3b5/webApps/-/config  
+ 
+[debug] [2020-02-02T15:08:22.535Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+>>>>>>> c452c703f8dad40a02bd21cf800e367116097042
