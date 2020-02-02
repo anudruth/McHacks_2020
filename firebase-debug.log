@@ -1,0 +1,30 @@
+[debug] [2020-02-02T03:24:54.848Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T03:24:54.851Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kuba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use --add
+[debug] [2020-02-02T03:24:54.851Z] CLI Version:   7.12.1
+[debug] [2020-02-02T03:24:54.851Z] Platform:      win32
+[debug] [2020-02-02T03:24:54.851Z] Node Version:  v12.14.1
+[debug] [2020-02-02T03:24:54.852Z] Time:          Sat Feb 01 2020 22:24:54 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-02T03:24:54.852Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T03:24:54.852Z] 
+[debug] [2020-02-02T03:24:54.857Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-02T03:24:54.857Z] > authorizing via signed-in user
+[debug] [2020-02-02T03:24:54.859Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-02T03:24:54.859Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-02T03:24:54.989Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T03:24:54.997Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=1000  
+ 
+[debug] [2020-02-02T03:24:55.544Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T03:25:20.347Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T03:25:20.349Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kuba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use --add
+[debug] [2020-02-02T03:25:20.349Z] CLI Version:   7.12.1
+[debug] [2020-02-02T03:25:20.349Z] Platform:      win32
+[debug] [2020-02-02T03:25:20.349Z] Node Version:  v12.14.1
+[debug] [2020-02-02T03:25:20.350Z] Time:          Sat Feb 01 2020 22:25:20 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-02T03:25:20.350Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T03:25:20.350Z] 
+[debug] [2020-02-02T03:25:20.356Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-02T03:25:20.356Z] > authorizing via signed-in user
+[debug] [2020-02-02T03:25:20.358Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=1000  
+ 
+[debug] [2020-02-02T03:25:23.630Z] <<< HTTP RESPONSE 200
